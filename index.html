@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="start()">
+    <h1>bashar</h1>
+    <h1>lang: <span id="c"></span></h1>
+    <button onclick="set('dolar')">dolar</button>
+    <button onclick="set('dinar')">dinar</button>
+
+    <script>
+        const start = () => {
+            
+            document.getElementById('c').innerText= localStorage.getItem('currency');
+        }
+        function set(val) {
+            console.log(localStorage.setItem('currency' , val))
+            document.getElementById('c').innerText= localStorage.getItem('currency');
+        }
+    </script>
+</body>
+</html>
